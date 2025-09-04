@@ -25,7 +25,8 @@
     "test:watch": "vitest",
     "prepare": "husky",
     "format:fix": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "typecheck": "tsc  --noEmit --pretty"
   },
   "resolutions": {
     "react": "19.0.0",
