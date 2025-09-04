@@ -23,7 +23,9 @@
     "check-tamagui": "tamagui check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format:fix": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "resolutions": {
     "react": "19.0.0",
@@ -50,6 +52,7 @@
     "npm": "10.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3"
+    "@biomejs/biome": "^1.9.3",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
   }
 }
