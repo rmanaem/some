@@ -1,7 +1,10 @@
 {
   "name": "nutrition-app",
   "private": true,
-  "workspaces": ["./apps/*", "./packages/*"],
+  "workspaces": [
+    "./apps/*",
+    "./packages/*"
+  ],
   "scripts": {
     "native": "cd apps/expo && yarn start",
     "native:prebuild": "cd apps/expo && yarn prebuild",
@@ -53,6 +56,7 @@
     "@eslint/js": "^9.34.0",
     "check-dependency-version-consistency": "^5.0.1",
     "eslint-import-resolver-typescript": "^3.10.1",
+    "lint-staged": "^16.1.6",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   }
