@@ -26,6 +26,8 @@
     "prepare": "husky",
     "format:fix": "prettier --write .",
     "format:check": "prettier --check .",
+    "lint:check": "eslint **/*.{ts,tsx} --no-warn-ignored --report-unused-disable-directives --max-warnings=0",
+    "lint:fix": "eslint **/*.{ts,tsx} --no-warn-ignored --fix",
     "typecheck": "tsc  --noEmit --pretty"
   },
   "resolutions": {
@@ -39,7 +41,7 @@
     "@babel/runtime": "^7.24.6",
     "@tamagui/cli": "^1.132.18",
     "check-dependency-version-consistency": "^4.1.0",
-    "eslint": "^9.3.0",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "turbo": "^1.13.4",
@@ -54,6 +56,20 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+    "@eslint/js": "^9.34.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/eslint-plugin-jsx-a11y": "^6",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.34.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-tsdoc": "^0.4.0",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.42.0"
   }
 }
