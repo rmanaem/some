@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.3/schema.json",
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "formatter": {
     "enabled": true,
@@ -336,6 +336,22 @@
         }
       }
     },
-    { "includes": ["**/*.{ts,tsx}"], "linter": { "rules": {} } }
+    { "includes": ["**/*.{ts,tsx}"], "linter": { "rules": {} } },
+    {
+      "includes": [
+        "apps/expo/app/_layout.tsx",
+        "apps/expo/babel.config.js",
+        "apps/expo/metro.config.js",
+        "apps/next/.eslintrc.js",
+        "apps/next/next.config.js"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noCommonJs": "off"
+          }
+        }
+      }
+    }
   ]
 }

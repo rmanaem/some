@@ -1,42 +1,42 @@
 export default {
   expo: {
-    name: "yourprojectsname",
-    slug: "yourprojectsname", 
-    scheme: "yourprojectsname",
-    version: "1.0.0",
-    orientation: "portrait",
-    icon: "./assets/icon.png",
-    userInterfaceStyle: "automatic",
+    name: 'yourprojectsname',
+    slug: 'yourprojectsname',
+    scheme: 'yourprojectsname',
+    version: '1.0.0',
+    orientation: 'portrait',
+    icon: './assets/icon.png',
+    userInterfaceStyle: 'automatic',
     splash: {
-      image: "./assets/splash.png",
-      resizeMode: "contain",
-      backgroundColor: "#ffffff"
+      image: './assets/splash.png',
+      resizeMode: 'contain',
+      backgroundColor: '#ffffff',
     },
     updates: {
-      fallbackToCacheTimeout: 0
+      fallbackToCacheTimeout: 0,
     },
-    assetBundlePatterns: ["**/*"],
+    assetBundlePatterns: ['**/*'],
     ios: {
       supportsTablet: true,
-      bundleIdentifier: "com.yourprojectsname.app"
+      bundleIdentifier: 'com.yourprojectsname.app',
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: "./assets/adaptive-icon.png",
-        backgroundColor: "#FFFFFF"
+        foregroundImage: './assets/adaptive-icon.png',
+        backgroundColor: '#FFFFFF',
       },
-      package: "com.yourprojectsname.app"
+      package: 'com.yourprojectsname.app',
     },
     web: {
-      favicon: "./assets/favicon.png"
+      favicon: './assets/favicon.png',
     },
-    plugins: ["expo-router", "expo-font"],
+    plugins: ['expo-router', 'expo-font'],
     experiments: {
-      typedRoutes: true
+      typedRoutes: true,
     },
     extra: {
       supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
-    }
-  }
-}
+    },
+  },
+};

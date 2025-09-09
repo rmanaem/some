@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
-import { NextTamaguiProvider } from 'app/provider/NextTamaguiProvider'
+import { NextTamaguiProvider } from 'app/provider/NextTamaguiProvider';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tamagui • App Router',
   description: 'Tamagui, Solito, Expo & Next.js',
   icons: '/favicon.ico',
-}
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,5 +15,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NextTamaguiProvider>{children}</NextTamaguiProvider>
       </body>
     </html>
-  )
+  );
 }

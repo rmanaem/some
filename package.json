@@ -1,10 +1,7 @@
 {
   "name": "nutrition-app",
   "private": true,
-  "workspaces": [
-    "./apps/*",
-    "./packages/*"
-  ],
+  "workspaces": ["./apps/*", "./packages/*"],
   "scripts": {
     "native": "cd apps/expo && yarn start",
     "native:prebuild": "cd apps/expo && yarn prebuild",
@@ -30,6 +27,7 @@
     "lint:fix": "biome lint --write .",
     "check": "biome check --write .",
     "check:ci": "biome check .",
+    "imports:fix": "biome check --organize-imports --write .",
     "typecheck": "tsc  --noEmit --pretty"
   },
   "resolutions": {
