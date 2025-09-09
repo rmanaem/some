@@ -1,16 +1,17 @@
-import '@tamagui/core/reset.css'
-import '@tamagui/font-inter/css/400.css'
-import '@tamagui/font-inter/css/700.css'
-import 'raf/polyfill'
+import '@tamagui/core/reset.css';
+import '@tamagui/font-inter/css/400.css';
+import '@tamagui/font-inter/css/700.css';
+import 'raf/polyfill';
 
-import type React from 'react'
-import Head from 'next/head'
-import type { SolitoAppProps } from 'solito'
-import { NextTamaguiProvider } from 'app/provider/NextTamaguiProvider'
-import { config } from '@my/ui'
+import { config } from '@my/ui';
+import { NextTamaguiProvider } from 'app/provider/NextTamaguiProvider';
+import Head from 'next/head';
+import type React from 'react';
+import type { SolitoAppProps } from 'solito';
 
 if (process.env.NODE_ENV === 'production') {
-  require('../public/tamagui.css')
+  // biome-ignore lint: Next needs side-effect import
+  require('../public/tamagui.css');
 }
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
@@ -49,7 +50,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
         <Component {...pageProps} />
       </NextTamaguiProvider>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

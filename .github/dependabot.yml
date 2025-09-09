@@ -1,0 +1,31 @@
+version: 2
+updates:
+
+  # Instruct dependabot to open PRs if a newer version
+  # of a github action has been released.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  
+  # In repo settings, dependabot is configured to open PRs for security updates.
+  # Here, dependabot is configured to open version update PRs for only patch and minor versions of javascript / npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # This setting instructs dependabot to group PRs for version updates of all development or production dependencies
+    # into single PRs to reduce the total number of PRs opened.
+    groups:
+      production-dependencies:
+        applies-to: version-updates
+        dependency-type: "production"
+      development-dependencies:
+        applies-to: version-updates
+        dependency-type: "development"
+    # Ignore all major version updates of dependencies.
+    # Only bump major versions manually or if doing
+    # so addresses a security vulnerability.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]

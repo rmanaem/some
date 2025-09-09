@@ -1,10 +1,7 @@
 {
   "name": "nutrition-app",
   "private": true,
-  "workspaces": [
-    "./apps/*",
-    "./packages/*"
-  ],
+  "workspaces": ["./apps/*", "./packages/*"],
   "scripts": {
     "native": "cd apps/expo && yarn start",
     "native:prebuild": "cd apps/expo && yarn prebuild",
@@ -23,7 +20,15 @@
     "check-tamagui": "tamagui check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format:check": "biome format .",
+    "format:fix": "biome format --write .",
+    "lint:check": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "check": "biome check --write .",
+    "check:ci": "biome check .",
+    "imports:fix": "biome check --organize-imports --write .",
+    "typecheck": "tsc  --noEmit --pretty"
   },
   "resolutions": {
     "react": "19.0.0",
@@ -35,14 +40,9 @@
   "dependencies": {
     "@babel/runtime": "^7.24.6",
     "@tamagui/cli": "^1.132.18",
-    "check-dependency-version-consistency": "^4.1.0",
-    "eslint": "^9.3.0",
     "husky": "^9.1.6",
-    "prettier": "^3.3.3",
     "turbo": "^1.13.4",
-    "typescript": "~5.8.3",
-    "ultra-runner": "^3.10.5",
-    "vitest": "^2.1.1"
+    "ultra-runner": "^3.10.5"
   },
   "packageManager": "yarn@4.5.0",
   "engines": {
@@ -50,6 +50,12 @@
     "npm": "10.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3"
+    "@biomejs/biome": "2.2.3",
+    "@eslint/js": "^9.34.0",
+    "check-dependency-version-consistency": "^5.0.1",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "lint-staged": "^16.1.6",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }
