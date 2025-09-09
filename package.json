@@ -38,8 +38,8 @@
     "react-native-web": "~0.19.12"
   },
   "dependencies": {
-    "@babel/runtime": "^7.24.6",
-    "@tamagui/cli": "^1.132.18",
+    "@babel/runtime": "^7.28.4",
+    "@tamagui/cli": "^1.132.23",
     "husky": "^9.1.6",
     "turbo": "^1.13.4",
     "ultra-runner": "^3.10.5"
