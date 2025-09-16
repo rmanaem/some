@@ -30,7 +30,7 @@ export default {
     web: {
       favicon: './assets/favicon.png',
     },
-    plugins: ['expo-router', 'expo-font'],
+    plugins: ['expo-router', 'expo-font', 'expo-secure-store'],
     experiments: {
       typedRoutes: true,
     },
