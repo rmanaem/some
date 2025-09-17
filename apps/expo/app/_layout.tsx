@@ -1,6 +1,7 @@
 import { NativeToast } from '@my/ui/src/NativeToast';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Provider } from 'app/provider';
+import { AuthProvider } from 'app/provider/AuthProvider';
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
@@ -38,11 +39,13 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <Provider>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack />
-        <NativeToast />
-      </ThemeProvider>
-    </Provider>
+    <AuthProvider>
+      <Provider>
+        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+          <Stack />
+          <NativeToast />
+        </ThemeProvider>
+      </Provider>
+    </AuthProvider>
   );
 }

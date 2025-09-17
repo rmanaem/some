@@ -1,6 +1,9 @@
+import { createClient } from '@supabase/supabase-js';
 import * as SecureStore from 'expo-secure-store';
 
-const SUPABASE_TOKEN_KEY = 'sb-token';
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL!;
+const projectId = supabaseUrl.match(/^https?:\/\/([^.]+)\.supabase\.co/)?.[1] ?? '';
+const SUPABASE_TOKEN_KEY = `sb-${projectId}-auth-token`;
 
 export const authStorage = {
   async getToken(): Promise<string | null> {
