@@ -12,6 +12,9 @@ export function HomeScreen() {
       <Link href="/dev/auth-test">
         <Text style={{ padding: 12, color: 'blue' }}>Open Auth Test</Text>
       </Link>
+      <Link href="/auth/signin">
+        <Text style={{ padding: 12, color: 'white' }}>Open sign in screen</Text>
+      </Link>
 
       <Text style={{ padding: 12, color: 'red' }} onPress={() => setShowTest((v) => !v)}>
         {showTest ? 'Close' : 'Open'} Supabase Test
