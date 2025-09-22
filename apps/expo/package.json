@@ -40,11 +40,11 @@
     "react-native-web": "^0.20.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.6",
-    "@expo/metro-config": "~0.20.0",
-    "@tamagui/babel-plugin": "^1.132.18",
-    "metro-minify-terser": "^0.81.0",
-    "typescript": "~5.8.3"
+    "@babel/core": "^7.28.4",
+    "@expo/metro-config": "~0.21.11",
+    "@tamagui/babel-plugin": "^1.133.1",
+    "metro-minify-terser": "^0.83.2",
+    "typescript": "~5.9.2"
   },
   "resolutions": {
     "metro": "0.81.0",
